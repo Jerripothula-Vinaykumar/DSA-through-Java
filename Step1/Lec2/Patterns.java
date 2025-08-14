@@ -127,7 +127,7 @@ public class Patterns {
         sc.close();
         System.out.println();
     }
-     static void pattern7()
+    static void pattern7()
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the range to Print the Pattern : ");
@@ -158,6 +158,43 @@ public class Patterns {
         sc.close();
         System.out.println();
     }
+     
+    static void pattern8()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the range to Print the Pattern : ");
+        int range = sc.nextInt();
+        System.out.println();
+        System.out.println("Number Pattern 2 ..");
+        System.out.println();
+
+        for(int i = 0 ; i < range; i++)
+        {
+            //space
+            for(int j = 0 ; j < i ; j ++)
+            {
+                System.out.print(" ");
+            } 
+            //star
+            int breakpoint = (2*range - 1);
+             for(int j = 0 ; j < breakpoint ; j ++)
+            {
+                System.out.print("*");
+            } 
+            //space
+             for(int j = 0 ; j < i ; j ++)
+            {
+             System.out.print(" ");   
+            } 
+
+            breakpoint -= 2;
+            System.out.println("");
+        }
+        sc.close();
+        System.out.println();
+    }
+    
+
     public static void main(String[] args) 
     {
 
@@ -249,6 +286,15 @@ public class Patterns {
          *******
           pattern7();
          */
+
+         /* 
+           *********
+            *******
+             *****
+              *** 
+               *
+          */
+          pattern8();
        
         
     }
