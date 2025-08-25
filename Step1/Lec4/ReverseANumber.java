@@ -4,11 +4,11 @@ public class ReverseANumber {
     public static int reverseANumber(int number)
     {
        
-        int ls , reversednum = 0 ;
+        int ld , reversednum = 0 ;
         while(number > 0)
         {
-            ls = number % 10;
-            reversednum = (reversednum*10) + ls;
+            ld = number % 10;
+            reversednum = (reversednum*10) + ld;
             number = number / 10;
         }
         return reversednum;
