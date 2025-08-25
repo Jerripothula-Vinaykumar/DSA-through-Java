@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Selectionsort {
+public class SelectionSort {
 
     public static int[] selectionsort(int[] arr, int n) {
         // outer Loop
