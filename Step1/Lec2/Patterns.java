@@ -228,6 +228,32 @@ public class Patterns {
 
     }
     
+    public static void pattern10() {
+
+        int inis = 4+2;//2n-1
+        for(int i = 1 ; i <= 4 ; i++)
+        {
+
+            //number 
+            for(int j = 1 ; j <= i ; j++) {
+                System.out.print(j);
+            }
+              
+            //space
+           
+             for(int j = 0 ; j < inis ; j++) {
+                System.out.print(" ");
+            }
+
+            //number
+             for(int j = i ; j >=1 ; j--) {
+                System.out.print(j);
+            }
+            System.out.println("");
+            inis-=2;
+
+        }
+    }
 
     public static void main(String[] args) 
     {
@@ -335,10 +361,19 @@ public class Patterns {
             1 2 3
            1 2 3 4 5
         `1 2 3 4 5 6 7
-
+            pattern9();
        */
-      pattern9();
-       
+     
+
+       /* 
+         1      1
+         12    21
+         123  321
+         12344321 
+
+
+        */
+       pattern10();
         
     }
 
