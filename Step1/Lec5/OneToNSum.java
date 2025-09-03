@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class OneToNSum {
 
     public static int sumOfFirstNNaturalNumbers(int n) {
+        
         if(n == 0) {
             return 0;
         }

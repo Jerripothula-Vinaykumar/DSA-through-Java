@@ -1,40 +1,36 @@
+package Step2.Lec1;
 import java.util.Scanner;
-
 public class SelectionSort {
+    public static void selectionSort(int[] arr) {
 
-    public static int[] selectionsort(int[] arr, int n) {
-        // outer Loop
-        // Why n-2 , n-1 is last element and you dont have to swap the only element . i.e n-2
-        for (int i = 0; i < n - 2; i++) {
-            int mini = i;
-            for (int j = i; j < n - 1; j++) {
-                if (arr[j] < arr[mini])
-                {
-                    mini = j;
+        for(int i = 0 ; i < arr.length-2 ; i++) {
+            int min = i;
+            for(int j = i ; j <= arr.length-1 ; j++) {
+                if(arr[j] < arr[min] ) {
+                    min = j;
                 }
             }
-            int temp = arr[mini];
-            arr[mini] = arr[i];
+            int temp = arr[min];
+            arr[min] = arr[i];
             arr[i] = temp;
 
         }
-        return arr;
+        System.out.print("Sorted Array using Selection Sort : ");
+        for(int i = 0 ;i < arr.length; i++ ) {
+            System.out.print(arr[i] + " " );
+        }
     }
-
-    public static void main(String[] args) {
+    public static void main( String[] args) {
+        
         Scanner sc = new Scanner(System.in);
-        System.out.print(" Enter the size of the array to Perform Selection Sort : ");
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
+        System.out.print("Enter No.of Elements : ");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        System.out.print("Enter " + size + " Elements : ");
+        for(int i = 0  ; i < size ; i++) {
             arr[i] = sc.nextInt();
         }
-        int[] sorted_arr =  selectionsort(arr, n);
-        for(int i :  sorted_arr)
-        {
-            System.out.print( i + " ");
-        }
-
+        selectionSort(arr);
         sc.close();
     }
 }
